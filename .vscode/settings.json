@@ -53,6 +53,13 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "optional": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "chrono": "cpp",
+        "forward_list": "cpp",
+        "iomanip": "cpp",
+        "ratio": "cpp",
+        "sstream": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     }
 }
