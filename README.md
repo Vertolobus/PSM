@@ -24,6 +24,7 @@
 
 <h2>class PSM::generate</h2>
   <b>переменные:</b>
+    
     *  int len = 12; //password length
 
     *  bool letter = true; - Определяет будут ли буквы в пароле
