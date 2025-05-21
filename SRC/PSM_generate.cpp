@@ -11,7 +11,23 @@
 #include "PSM.hpp"
 
 //---------------------
+PSM::generate::generate(int length, bool letters_add, bool number_add, bool simple_symbols_add, bool hard_symbols_add) {
+
+    len = length;
+
+    letter = letters_add;
+
+    number = number_add;
+
+    simple_symbols = simple_symbols_add;
+
+    hard_symbols = hard_symbols_add;
+
+}
+
+//---------------------
 void PSM::generate::update_password_letters(std::vector<char> list_letters, bool add) {
+
     if (add){
         for (int i = 0; i < letters.size(); i++) {
             letters.push_back(list_letters[i]);
@@ -45,6 +61,17 @@ void PSM::generate::update_hard_password_symbols(std::vector<char> hard_symbols,
 }
 //---------------------
 std::vector<std::string> PSM::generate::generate_password(int count) {
+    if (len == 0) { //check #1
+
+        throw std::runtime_error("password length = 0!");
+
+    }
+
+    if (!letter && !number && !simple_symbols && !hard_symbols) { //check #2
+
+        throw std::runtime_error("all_vectors = false!");
+
+    }
     srand(time(NULL));
     std::vector<std::string> passwords;
 

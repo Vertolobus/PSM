@@ -10,6 +10,8 @@
 
 namespace PSM { //PSM - PasSwordManager
     
+
+
     class generate {
     private:
         std::vector<char> letters = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
@@ -17,7 +19,7 @@ namespace PSM { //PSM - PasSwordManager
         std::vector<char> simple_password_symbols = {'!', '@', '#', '$', '%', '&', '*', '(', ')', '-', '_', '+', '.'};
         std::vector<char> hard_password_symbols = {'[', ']','{', '}', ':', ';', '\'', '\"', '~', '`', '^', '|', '\\', '/', '<', '>', ','};
     public:
-        
+
         int len = 12; //password length
 
         bool letter = true; //letters in password
@@ -40,6 +42,8 @@ namespace PSM { //PSM - PasSwordManager
         //Updating default-used password hard_symbols  
         void update_hard_password_symbols(std::vector<char> hard_symbols, bool add = false);
         //---------------------
+
+        generate(int length = 12, bool letters_add = true, bool number_add = true, bool simple_symbols_add = true, bool hard_symbols_add = false);
     };
 
 }
